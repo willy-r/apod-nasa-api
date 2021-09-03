@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Astronomy Picture of the Day</title>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- jQuery 3.6.0  https://code.jquery.com/ -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+
+    <!-- Local JS -->
+    <script src="js/utils.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container-col">
+      <header class="header-container">
+        <nav class="nav">
+          <a class="logo" href="#">APOD</a>
+
+          <ul class="menu">
+            <li>
+              <button class="main-btn -link" id="random-header" type="button">
+                Random Picture
+              </button>
+            </li>
+            <li>
+              <a class="link" href="#about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-section">
+        <h1 class="section-title">
+          <span class="highlight">A</span>stronomy <span class="highlight">P</span>icture <span class="highlight">o</span>f the <span class="highlight">D</span>ay
+        </h1>
+
+        <section class="wrapper-content">
+          <figure class="picture">
+            <figcaption>
+              <strong>Day</strong>: <span id="date">December 12, 2012</span>
+            </figcaption>
+            <img class="img" src="" alt="">
+          </figure>
+
+          <div class="main-content">
+            <article class="content">
+              <h3 class="title">Title goes here</h3>
+              <p class="explanation">
+                <strong>Explanation:</strong>
+                <br>
+                Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Vehicula non. Ut sed ex eros.
+                Vivamus sit amet nibh non tellus tristique interdum. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam
+                vulputate dapibus. Copo furadis é disculpa de bebadis, arcu quam euismod magna.
+              </p>
+              <p class="credits">
+                <strong>Credits</strong>: <u id="owner">Mussum Ipsum</u>
+              </p>
+            </article> <!-- .content -->
+
+            <!-- This form is hidden by default. -->
+            <form class="main-form">
+              <legend class="title">Enter a valid date to get a picture of that specific day.</legend>
+
+              <fieldset class="field">
+                <!-- The min date is the first picture of the API. -->
+                <label class="label" for="input-date">
+                  Enter a date:
+                </label>
+                <input class="input" id="input-date" type="date" name="date" min="1995-06-16">
+              </fieldset>
+
+              <button class="main-btn" id="form-btn" type="submit">
+                Send
+              </button>
+            </form> <!-- .main-form -->
+            
+            <div class="buttons">
+              <button class="main-btn" id="go-to-form" type="button">
+                Choose a day
+              </button>
+              
+              <!-- Hidden by default, until the user clicks on the 'Choose a day' button. -->
+              <button class="main-btn" id="back-btn" type="button">
+                &larr; Back to today
+              </button>
+              <button class="main-btn" id="random" type="button">
+                Random picture
+              </button>
+            </div>
+          </div> <!-- .main-content -->
+        </section> <!-- .wrapper-content -->
+      </main>
+
+      <section class="main-section">
+        <h2 class="section-title -medium">About</h2>
+
+        <div class="wrapper">
+          <p class="about">
+            <strong>Discover the cosmos!</strong> Each day of our fascinating universe is featured, along with a brief explanation
+            written by a professional astronomer.
+          </p>
+
+          <p class="about -small">
+            <u class="title">About image permissions</u>:
+            <br>
+            All the images on the <strong>APOD</strong> page are credited to the owner or institution where they originated. Some of
+            the images are copyrighted to use these pcitures publicly or commercially one must write to the owners for permission.
+            For the copyrighted images, the copyright owner is identified in the APOD credit line (please see the copyright owener
+            name afther the explanation). NASA images are in the public domain, official guidelines for their use can be found <a href="http://www.nasa.gov/audience/formedia/features/MP_Photo_Guidelines.html" target="_blank" rel="noopener external">here</a>.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer-content">
+        <p class="copyright">
+          <a href="https://github.com/willy-r" target="_blank" rel="noreferrer noopener external">William Rodrigues</a>
+          &copy; <span id="year">2021</span> - All rights reserved
+        </p>
+        <p class="credits">
+          Website made for study purposes, inspired in the <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank" rel="noopener external">original APOD website</a>, by <a href="https://api.nasa.gov/" target="_blank" rel="noopener external">NASA API</a>.
+        </p>
+      </footer>
+    </div> <!-- .container-col -->
+  </body>
+</html>
