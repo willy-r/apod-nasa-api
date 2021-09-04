@@ -11,6 +11,23 @@ $('#random').click(() => {
 $('#go-to-form').click(displayForm);
 $('#back-btn').click(hideForm);
 
+// Form.
+$('.main-form').first().submit((event) => {
+  event.preventDefault();
+
+  const data = new FormData(event.target),
+        date = data.get('date');
+  console.log(date);
+  const url = getURL(false, date);
+  console.log(url);
+  handleData(url, (data) => {
+    displayPictureOfTheDay(data);
+    hideForm();
+  });
+
+  event.target.reset();
+});
+
 // Functions.
 function initialConfigs() {
   const url = getURL();
