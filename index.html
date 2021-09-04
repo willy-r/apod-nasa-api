@@ -6,6 +6,11 @@
     
     <title>Astronomy Picture of the Day</title>
 
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+
     <!-- Local CSS -->
     <link rel="stylesheet" href="style/style.css">
 
@@ -15,18 +20,17 @@
     </script>
 
     <!-- Local JS -->
-    <script src="js/utils.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
     <div class="container-col">
       <header class="header-container">
         <nav class="nav">
-          <a class="logo" href="#">APOD</a>
+          <a class="logo" href="./">APOD</a>
 
           <ul class="menu">
             <li>
-              <button class="main-btn -link" id="random-header" type="button">
+              <button class="main-btn link" id="random-header" type="button">
                 Random Picture
               </button>
             </li>
@@ -43,12 +47,8 @@
         </h1>
 
         <section class="wrapper-content">
-          <figure class="picture">
-            <figcaption>
-              <strong>Day</strong>: <span id="date">December 12, 2012</span>
-            </figcaption>
-            <img class="img" src="" alt="">
-          </figure>
+          <!-- This is defined on JS. -->
+          <figure class="figure"></figure>
 
           <div class="main-content">
             <article class="content">
@@ -86,6 +86,9 @@
               <button class="main-btn" id="go-to-form" type="button">
                 Choose a day
               </button>
+              <a class="main-btn" id="hdr-img" href="" target="_blank" rel="external" title="Click here to see a higher quality image">
+                See HDR image
+              </a>
               
               <!-- Hidden by default, until the user clicks on the 'Choose a day' button. -->
               <button class="main-btn" id="back-btn" type="button">
@@ -119,7 +122,7 @@
         </div>
       </section>
 
-      <footer class="footer-content">
+      <footer class="footer-container">
         <p class="copyright">
           <a href="https://github.com/willy-r" target="_blank" rel="noreferrer noopener external">William Rodrigues</a>
           &copy; <span id="year">2021</span> - All rights reserved

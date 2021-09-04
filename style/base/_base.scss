@@ -1,0 +1,21 @@
+/*
+ * General styles.
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $ff-josefin-sans-400;
+  color: $clr-white;
+  background-color: $clr-black;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.container-col {
+  width: 100%;
+}
