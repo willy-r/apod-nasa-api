@@ -1,7 +1,17 @@
 initialConfigs();
 
-$('#random-header').click(displayRandomPicture);
+// Events.
 
+// Buttons.
+$('#random-header').click(displayRandomPicture);
+$('#random').click(() => {
+  displayRandomPicture();
+  hideForm();
+});
+$('#go-to-form').click(displayForm);
+$('#back-btn').click(hideForm);
+
+// Functions.
 function initialConfigs() {
   const url = getURL();
 
@@ -18,7 +28,7 @@ function displayRandomPicture() {
 }
 
 function displayPictureOfTheDay(data) {
-  // If it's random data, returns an Array, so gets the JSON.
+  // If it's random data, returns an Array, so gets the first JSON.
   if (Array.isArray(data))
     data = data[0];
 
@@ -51,4 +61,26 @@ function setContents(data) {
 
 function setInputDateConfigs(data) {
   $('#input-date').attr({ max: data.date, value: data.date });
+}
+
+function displayForm() {
+  $('.content').first().hide();
+  $('.main-form').first().show();
+
+  // Buttons.
+  $('#go-to-form').hide();
+  $('#hdr-img').hide();
+  $('#back-btn').show();
+  $('#random').show();
+}
+
+function hideForm() {
+  $('.main-form').first().hide();
+  $('.content').first().show();
+
+  // Buttons.
+  $('#go-to-form').show();
+  $('#hdr-img').show();
+  $('#back-btn').hide();
+  $('#random').hide();
 }
