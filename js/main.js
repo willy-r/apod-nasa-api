@@ -69,7 +69,8 @@ function setContents(data) {
   if (data.copyright) {
     $('#copy-owner').text(data.copyright);
     $('.credits').first().show();
-  }
+  } else
+    $('.credits').first().hide();
 }
 
 function setInputDateConfigs(data) {
@@ -108,7 +109,7 @@ function backToToday() {
   $('#random').hide();
 }
 
-function displayError() {
-  $('#error').show('fast');
+function displayError(data) {
+  $('#error').text(data.responseJSON.msg).show('fast');
   setTimeout(() => $('#error').hide('fast'), 5000);
 }
