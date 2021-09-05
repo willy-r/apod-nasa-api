@@ -1,0 +1,15 @@
+.section-title {
+  font: {
+    size: 2.375em; // 38px
+    weight: 700;
+  }
+  letter-spacing: .033em;
+
+  > .highlight {
+    padding: .24em .12em 1px;
+    font-size: 1.1em; // 42px
+    text-transform: uppercase;
+    background-color: $clr-oxford-blue;
+    border: 1px solid rgba($clr-white, .3);
+  }
+}
