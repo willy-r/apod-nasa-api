@@ -4,12 +4,9 @@ initialConfigs();
 
 // Buttons.
 $('#random-header').click(displayRandomPicture);
-$('#random').click(() => {
-  displayRandomPicture();
-  hideForm();
-});
+$('#random').click(displayRandomPicture);
 $('#go-to-form').click(displayForm);
-$('#back-btn').click(hideForm);
+$('#back-btn').click(backToToday);
 
 // Form.
 $('.main-form').first().submit((event) => {
@@ -17,13 +14,9 @@ $('.main-form').first().submit((event) => {
 
   const data = new FormData(event.target),
         date = data.get('date');
-  console.log(date);
-  const url = getURL(false, date);
-  console.log(url);
-  handleData(url, (data) => {
-    displayPictureOfTheDay(data);
-    hideForm();
-  });
+  
+  const url = getURL(false, date); 
+  handleData(url, displayPictureOfTheDay, displayError);
 
   event.target.reset();
 });
@@ -48,7 +41,8 @@ function displayPictureOfTheDay(data) {
   // If it's random data, returns an Array, so gets the first JSON.
   if (Array.isArray(data))
     data = data[0];
-
+  
+  hideForm();
   setContents(data);
 }
 
@@ -59,10 +53,12 @@ function setContents(data) {
   if (data.media_type === 'image') {
     const altText = data.copyright ? `${data.title} by ${data.copyright}` : data.title;
 
-    $('#media-img').attr({ src: data.url, alt: altText });
+    $('#media-video').hide();
+    $('#media-img').attr({ src: data.url, alt: altText }).show();
     $('#hdr-img').attr('href', data.hdurl).show();
   } else {
     $('#media-img').hide();
+    $('#hdr-img').hide();
     $('#media-video').attr('src', data.url).show();
   }
   
@@ -100,4 +96,19 @@ function hideForm() {
   $('#hdr-img').show();
   $('#back-btn').hide();
   $('#random').hide();
+}
+
+function backToToday() {
+  $('.main-form').first().hide();
+  $('.content').first().show();
+
+  // Buttons.
+  $('#go-to-form').show();
+  $('#back-btn').hide();
+  $('#random').hide();
+}
+
+function displayError() {
+  $('#error').show('fast');
+  setTimeout(() => $('#error').hide('fast'), 5000);
 }

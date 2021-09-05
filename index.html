@@ -79,12 +79,17 @@
                 <label class="label" for="input-date">
                   Enter a date:
                 </label>
-                <input class="input" id="input-date" type="date" name="date" min="1995-06-16">
+                <input class="input" id="input-date" type="date" name="date" min="1995-06-16" required>
               </fieldset>
 
               <button class="main-btn" type="submit">
                 Send
               </button>
+
+              <!-- Hidden by default. -->
+              <p class="error" id="error" style="display: none;">
+                There's no data to this date, please try another one.
+              </p>
             </form> <!-- .main-form -->
             
             <div class="buttons">
