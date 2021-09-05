@@ -1,0 +1,22 @@
+@mixin scrollbars($width, $thumb-color, $background-color: rgba(mix($clr-oxford-blue, $thumb-color, 70%), .5)) {
+  // For Google Chrome.
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $background-color;
+  }
+  
+  // For Firefox.
+  scrollbar-width: thin;
+  scrollbar-color: $thumb-color $background-color;
+
+  // For Internet Explore.
+  scrollbar-face-color: $thumb-color;
+  scrollbar-track-color: $background-color;
+}
