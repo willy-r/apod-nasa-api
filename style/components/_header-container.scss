@@ -1,8 +1,8 @@
 .header-container {
-  padding: 1.8% 3%;
+  padding: 2.5% 3% 1.8%;
   width: 100%;
-  background-color: $clr-oxford-blue;
-  border-bottom: 1px solid rgba($clr-white, .5);
+  border-bottom: 1px solid rgba($clr-white, .3);
+  background: $clr-oxford-blue url(../images/background-header.jpg) center/cover no-repeat;
 
   > .nav {
     display: flex;
@@ -11,7 +11,6 @@
   }
 
   > .nav > .logo {
-    // margin-top: .3em;
     font: {
       size: 2em; // 32px
       weight: 700;
