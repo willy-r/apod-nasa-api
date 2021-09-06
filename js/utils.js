@@ -32,3 +32,14 @@ function getURL(random=false, date='') {
 
   return url.toString();
 }
+
+/**
+ * Sets the current year on a element
+ * 
+ * @param {HTMLElement} element An element to set the year.
+ */
+function setCurrentYear(element) {
+  const currentYear = new Date().getFullYear();
+  
+  element.textContent = currentYear;
+}

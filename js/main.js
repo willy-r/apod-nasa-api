@@ -29,6 +29,7 @@ function initialConfigs() {
     displayPictureOfTheDay(data);
     setInputDateConfigs(data);
   });
+  setCurrentYear($('#year')[0]);
 }
 
 function displayRandomPicture() {
