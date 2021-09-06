@@ -1,0 +1,42 @@
+.wrapper-about {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 1.4em;
+  font-size: 1.125em; // 18px
+  line-height: 1.1em;
+
+  > .about {
+    text-align: center;
+
+    &.-small {
+      font-size: .9em; // 16px
+      text-align: left;
+
+      > .title {
+        display: block;
+        margin-bottom: .20em;
+        font: {
+          size: 1.25em; // 20px
+          family: $ff-roboto-cond-400;
+        }
+        color: $clr-roman-silver;
+      }
+    }
+
+    &.-box {
+      padding: 10px;
+      background-color: rgba($clr-white, .1);
+      border: $main-border;
+    }
+
+    > a {
+      text-decoration: underline solid;
+      transition: 250ms;
+
+      &:hover {
+        color: $clr-blue-violet;
+      }
+    }
+  }
+}
