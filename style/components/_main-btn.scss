@@ -1,5 +1,23 @@
 .main-btn {
-  font-size: 1em; // 16px
+  padding: .73em .4em .4em;
+  font: {
+    size: 1.125em; // 18px
+    weight: 600;
+  }
   color: $clr-white;
+  text-transform: uppercase;
+  border: $main-border;
   cursor: pointer;
+  transition: 300ms;
+
+  &.-full {
+    width: 100%;
+    text-align: center;
+  }
+
+  &.-fill-up:hover,
+  &.-fill-up:focus {
+    box-shadow: inset 0 -2.5em 0 0 $clr-blue-violet;
+    border-color: transparent;
+  }
 }
