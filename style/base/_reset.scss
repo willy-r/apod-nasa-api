@@ -57,9 +57,18 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+input {
   font-family: inherit;
   color: inherit;
   border: none;
+  outline: none;
   background-color: transparent;
+}
+
+// Hide calendar icon in Chrome.
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+               display: none;
 }

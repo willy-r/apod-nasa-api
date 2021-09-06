@@ -1,0 +1,49 @@
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  gap: 8%;
+  border: $main-border;
+
+  > .title {
+    font-size: 1.5em; // 24px
+    width: 80%;
+  }
+
+  > .field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > .field > .label {
+    font: {
+      size: 1.375em; // 22px
+      weight: 600;
+    }
+  }
+
+  > .field > .input {
+    padding-top: .28em;
+    margin-bottom: 1.1em;
+    font-size: 1.125em; // 18px
+    border: $main-border;
+    text-align: center;
+
+    &:focus {
+      outline: $clr-blue-violet solid 2px;
+      border-color: transparent;
+    }
+  }
+
+  > .error {
+    font: {
+      size: 14px;
+      weight: 600;
+    }
+    text-align: center;
+    color: $clr-error;
+  }
+}
