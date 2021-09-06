@@ -1,0 +1,11 @@
+.footer-container {
+  width: 100%;
+  padding: 2.5% 2% 2%;
+  text-align: center;
+  background-color: $clr-oxford-blue;
+
+  > .copyright {
+    font-size: 1.125em; // 18px
+    margin-bottom: .28em;
+  }
+}

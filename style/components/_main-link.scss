@@ -1,0 +1,8 @@
+.main-link {
+  text-decoration: underline solid;
+  transition: 250ms;
+
+  &:hover {
+    color: $clr-blue-violet;
+  }
+}
