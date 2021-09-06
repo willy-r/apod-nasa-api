@@ -1,7 +1,7 @@
 .header-container {
   padding: 2.5% 3% 1.8%;
   width: 100%;
-  border-bottom: 1px solid rgba($clr-white, .3);
+  border-bottom: $main-border;
   background: $clr-oxford-blue url(../images/background-header.jpg) center/cover no-repeat;
 
   > .nav {
@@ -15,6 +15,7 @@
       size: 2em; // 32px
       weight: 700;
     }
+    text-transform: uppercase;
     line-height: 1em;
     letter-spacing: .068em;
     transition: 250ms;
@@ -33,6 +34,7 @@
 
     .link {
       font-size: 1.375em; // 22px
+      cursor: pointer;
       transition: 250ms;
 
       &:hover {

@@ -59,4 +59,11 @@
       font-size: 1.125em; // 18px
     }
   }
+
+  > .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .625rem;
+  }
 }

@@ -14,7 +14,7 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="style/style.css">
 
-    <!-- jQuery 3.6.0  https://code.jquery.com/ -->
+    <!-- jQuery 3.6.0 https://code.jquery.com/ -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
@@ -28,11 +28,11 @@
     <div class="container-col">
       <header class="header-container">
         <nav class="nav">
-          <a class="logo" href="./">APOD</a>
+          <a class="logo" href="./">apod</a>
 
           <ul class="menu">
             <li>
-              <button class="main-btn link" id="random-header" type="button">
+              <button class="link" id="random-header" type="button" title="Click to load a random picture">
                 Random Picture
               </button>
             </li>
@@ -51,11 +51,11 @@
         <section class="wrapper-content">
           <figure class="figure">
             <figcaption>
-              <strong>Day</strong>: <u id="date"></u> <!-- Date is defined on JS. -->
+              <strong>Day:</strong> <u id="date"></u> <!-- Date is defined on JS. -->
             </figcaption>
             <img class="media" id="media-img" src="#" alt="This will change on JS.">
             <!-- Hidden by default, only shows if the content isn't a image. -->
-            <iframe class="media" id="media-video" src="#" allowfullscreen style="display: none;"></iframe>
+            <iframe class="media" id="media-video" src="#" frameborder="0" allowfullscreen style="display: none;"></iframe>
           </figure>
 
           <div class="main-content">
@@ -67,7 +67,7 @@
               </p>
               <!-- Hidden by default, sometimes there's no copyright owner. -->
               <p class="credits" style="display: none;">
-                <strong>Credits</strong>: <u id="copy-owner"></u> <!-- Owner is defined on JS. -->
+                <strong>Credits:</strong> <ins id="copy-owner"></ins> <!-- Owner is defined on JS. -->
               </p>
             </article> <!-- .content -->
 
@@ -82,7 +82,7 @@
                 <input class="input" id="input-date" type="date" name="date" min="1995-06-16" required>
               </fieldset>
 
-              <button class="main-btn" type="submit">
+              <button class="main-btn -fill-up" type="submit">
                 Send
               </button>
 
@@ -91,19 +91,19 @@
             </form> <!-- .main-form -->
             
             <div class="buttons">
-              <button class="main-btn" id="go-to-form" type="button">
+              <button class="main-btn -full -fill-up" id="go-to-form" type="button">
                 Choose a day
               </button>
               <!-- Hidden by default, sometimes there's no HD image. -->
-              <a class="main-btn" id="hdr-img" href="#" target="_blank" rel="external" title="Click here to see a higher quality image" style="display: none;">
+              <a class="main-btn -full -fill-up" id="hdr-img" href="#" target="_blank" rel="external" title="Click here to see a higher quality image" style="display: none;">
                 See HDR image
               </a>
               
               <!-- Hidden by default, until the user clicks on the 'Choose a day' button. -->
-              <button class="main-btn" id="back-btn" type="button" style="display: none;">
+              <button class="main-btn -full -fill-up" id="back-btn" type="button" style="display: none;">
                 &larr; Back to today
               </button>
-              <button class="main-btn" id="random" type="button" style="display: none;">
+              <button class="main-btn -full -fill-up" id="random" type="button" title="Click to choose a random picture" style="display: none;">
                 Random picture
               </button>
             </div>
