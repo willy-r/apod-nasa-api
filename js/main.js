@@ -81,7 +81,7 @@ function setInputDateConfigs(data) {
 
 function displayForm() {
   $('.content').first().hide();
-  $('.main-form').first().show();
+  $('.main-form').first().show('fast');
 
   // Buttons.
   $('#go-to-form').hide();
