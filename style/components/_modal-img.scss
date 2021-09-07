@@ -1,0 +1,26 @@
+.modal-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2% 3%;
+  background-color: rgba($clr-black, .5);
+
+  > .main-btn {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    z-index: 2;
+  }
+
+  > .media {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

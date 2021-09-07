@@ -48,13 +48,14 @@ function displayPictureOfTheDay(data) {
 }
 
 function setContents(data) {
-  // Defines the date and the media content.
+  // Defines the date, the media content and the .
   $('#date').text(getFormattedDate(data.date));
   
   if (data.media_type === 'image') {
     const altText = data.copyright ? `${data.title} by ${data.copyright}` : data.title;
 
     $('#media-video').hide();
+    $('#modal-img').attr({ src: data.url, alt: altText });
     $('#media-img').attr({ src: data.url, alt: altText }).show();
     $('#hdr-img').attr('href', data.hdurl).show();
   } else {
