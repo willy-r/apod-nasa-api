@@ -25,7 +25,6 @@
     <!-- Local JS -->
     <script src="js/utils.js"></script>
     <script src="js/api.js"></script>
-    <script src="js/modal.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -67,7 +66,7 @@
             </figcaption>
 
             <img class="media" id="media-img" src="#" alt="#" title="Click to see the full image">
-            <!-- Hidden by default, only shows if the content isn't a image. -->
+            <!-- Hidden by default, only shows if the media isn't a image. -->
             <iframe class="media" id="media-video" src="#" frameborder="0" allowfullscreen style="display: none;"></iframe>
           </figure>
 
@@ -99,7 +98,7 @@
                 </button>
               </fieldset>
 
-              <!-- Hidden by default. -->
+              <!-- Hidden by default, only displays when there's a error. -->
               <p class="error" id="error" style="display: none;">Mensagem de erro</p>
             </form> <!-- .main-form -->
             

@@ -21,6 +21,16 @@ $('.main-form').first().submit((event) => {
   event.target.reset();
 });
 
+// Modal.
+$('#media-img').click(displayModal);
+$('#close-modal').click(hideModal);
+$('body').keyup((event) => {
+  if (event.which === 27) {
+    event.preventDefault();
+    hideModal();
+  }
+});
+
 // Functions.
 function initialConfigs() {
   const url = getURL();
@@ -48,7 +58,7 @@ function displayPictureOfTheDay(data) {
 }
 
 function setContents(data) {
-  // Defines the date, the media content and the .
+  // Defines the date and the media content.
   $('#date').text(getFormattedDate(data.date));
   
   if (data.media_type === 'image') {
@@ -114,4 +124,16 @@ function backToToday() {
 function displayError(data) {
   $('#error').text(data.responseJSON.msg).show('fast');
   setTimeout(() => $('#error').hide('fast'), 5000);
+}
+
+function displayModal() {
+  $('#modal').show('fast');
+  $('body').css('overflow-y', 'hidden');
+  $('.container-col').first().css('filter', 'blur(3px)');
+}
+
+function hideModal() {
+  $('#modal').hide('fast');
+  $('body').css('overflow-y', 'auto');
+  $('.container-col').first().css('filter', 'none');
 }
