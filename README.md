@@ -5,7 +5,7 @@ APOD (**Astronomy Picture of the Day**) is a website that uses the NASA API to d
 
 ## About
 
-Discover the cosmos! Since June 15, 1995, each day of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.
+Discover the cosmos! Since June 16, 1995, each day of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.
 
 
 ## Demo & Drafts

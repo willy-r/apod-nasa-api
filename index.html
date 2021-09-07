@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="APOD (Astronomy Picture of the Day) is a website that uses the NASA API to display a different picture of the cosmos every day.">
     <!-- Favicon generated here:  -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     
@@ -24,9 +25,18 @@
     <!-- Local JS -->
     <script src="js/utils.js"></script>
     <script src="js/api.js"></script>
+    <script src="js/modal.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
+    <!-- Only displays when the user clicks over the image. -->
+    <div class="modal-img" id="modal" style="display: none;">
+      <button class="main-btn -fill-up -close" id="close-modal" type="button" title="Close">
+        &#10005;
+      </button>
+      <img class="media" id="modal-img" src="#" alt="#">
+    </div>
+
     <div class="container-col">
       <header class="header-container">
         <nav class="nav">
@@ -55,7 +65,8 @@
             <figcaption>
               <strong>Day:</strong> <u id="date"></u> <!-- Date is defined on JS. -->
             </figcaption>
-            <img class="media" id="media-img" src="#" alt="This will change on JS.">
+
+            <img class="media" id="media-img" src="#" alt="#" title="Click to see the full image">
             <!-- Hidden by default, only shows if the content isn't a image. -->
             <iframe class="media" id="media-video" src="#" frameborder="0" allowfullscreen style="display: none;"></iframe>
           </figure>
@@ -118,7 +129,7 @@
 
         <div class="wrapper-about">
           <p class="about">
-            <strong>Discover the cosmos!</strong> Since <ins>June 15, 1995</ins>, each day of our fascinating universe is
+            <strong>Discover the cosmos!</strong> Since <ins>June 16, 1995</ins>, each day of our fascinating universe is
             featured, along with a brief explanation written by a professional astronomer.
           </p>
 
