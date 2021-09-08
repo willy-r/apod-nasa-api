@@ -10,7 +10,7 @@ Discover the cosmos! Since June 16, 1995, each day of our fascinating universe i
 
 ## Demo & Drafts
 
-*Soon*
+![Demo](images/demo.gif)
 
 ### Drafts
 
