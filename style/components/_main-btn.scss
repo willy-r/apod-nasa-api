@@ -1,7 +1,7 @@
 .main-btn {
   padding: .73em .4em .4em;
   font: {
-    size: 1.125em; // 18px
+    size: 1.125rem; // 18px
     weight: 600;
   }
   color: $clr-white;
@@ -24,5 +24,11 @@
   &.-close {
     padding: .7em;
     font-size: 1.2em; // 22px
+  }
+}
+
+@media (max-width: $mobile-md) {
+  .main-btn {
+    font-size: 1rem; // 16px
   }
 }

@@ -15,7 +15,7 @@
 
   > .figure > figcaption {
     margin-bottom: .4em;
-    font-size: 1.125em; // 18px
+    font-size: 1.125rem; // 18px
 
     > strong {
       color: $clr-roman-silver;
@@ -34,6 +34,40 @@
       &:hover {
         cursor: pointer;
       }
+    }
+  }
+}
+
+@media (max-width: $tablet-md) {
+  .wrapper-content {
+    flex-direction: column;
+    height: auto;
+    gap: 4rem;
+
+    > .figure {
+      width: 95%;
+      height: 90vh;
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: $mobile-md) {
+  .wrapper-content {
+    gap: 3rem;
+
+    > .figure {
+      height: 60vh;
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: $mobile-sm) {
+  .wrapper-content {
+    > .figure {
+      height: 50vh;
+      align-self: center;
     }
   }
 }

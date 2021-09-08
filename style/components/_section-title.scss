@@ -1,10 +1,11 @@
 .section-title {
   font: {
-    size: 2.375em; // 38px
+    size: 2.375rem; // 38px
     weight: 700;
   }
   letter-spacing: .033em;
   text-align: center;
+  line-height: 1.6em;
 
   > .highlight {
     padding: .24em .12em 1px;
@@ -12,5 +13,19 @@
     text-transform: uppercase;
     background-color: $clr-oxford-blue;
     border: 1px solid rgba($clr-white, .3);
+  }
+}
+
+@media (max-width: $mobile-md) {
+  .section-title {
+    width: 75%;
+    font-size: 1.875rem; // 32px
+  }
+}
+
+@media (max-width: $mobile-sm) {
+  .section-title {
+    width: 100%;
+    font-size: 1.75rem; // 28px
   }
 }
